@@ -28,10 +28,7 @@ class User {
         password: hashPassword,
       });
       //res.send("Email успешно зарегистрирован");
-      res
-        .status(200)
-        .json({ message: "Email успешно зарегистрирован" })
-        .redirect("/red");
+      res.status(200).json({ message: "Email успешно зарегистрирован" });
     } catch (error) {
       res.send(error.message);
     }
